@@ -1,0 +1,27 @@
+{
+  "name": "hibp-local",
+  "version": "0.1.0",
+  "description": "Locally search the Have I Been Pwned database for compromised passwords",
+  "homepage": "https://github.com/codenamev/hibp-local",
+  "bugs": "https://github.com/codenamev/hibp-local/issues",
+  "main": "index.js",
+  "author": "Valentino Stoll <v@codenamev.com>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/codenamev/hibp-local.git",
+    "type": "git"
+  },
+  "scripts": {
+    "download": "node ./download.js",
+    "import": "node ./import.js",
+    "install": ""
+  },
+  "engines": {
+    "node": ">= 4"
+  },
+  "dependencies": {
+    "ora": "^2.0.0",
+    "node-fetch": "^2.0.0",
+    "mysql": "^2.15.0"
+  }
+}
