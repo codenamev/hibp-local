@@ -1,0 +1,26 @@
+version: "2"
+
+services:
+  percona:
+    image: percona/percona-server:latest
+    container_name: "hibp_percona"
+    command:
+      - "--user=mysql"
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+
+  hibp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "hibp_node"
+    command: node_modules/.bin/nodemon --exec yarn run start
+    ports:
+      - 4000:4000
+    depends_on:
+      - percona
+volumes:
+  db:
+    driver: local
