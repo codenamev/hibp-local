@@ -5,17 +5,32 @@ const last_snapshot_filename = "pwned-passwords-2.0.txt.7z"
 const last_snapshot_url = `https://downloads.pwnedpasswords.com/passwords/${last_snapshot_filename}`
 const last_snapshot_sha = "c267424e7d2bb5b10adff4d776fa14b0967bf0cc";
 const last_snapshot_destination_path = `./tmp/${last_snapshot_filename}`;
+const final_importable_csv_path = './tmp/data/pwned-passwords.txt';
 const FILE_DOWNLOAD_TIMEOUT = 7200000; // 2 hrs
 
 const spinner = ora('Downloading latest HIBP data...').start();
+
+const convertSnapshotToCSV = () => {
+  spinner.start(`Converting snapshot to CSV...`);
+  const execSync = require('child_process').execSync;
+  execSync(`sed -i 's/\:/,/g' ${last_snapshot_destination_path} && mv ${last_snapshot_destination_path} ${final_importable_csv_path}`, (err, stdout, stderr) => {
+    if (error) {
+      spinner.fail(`Error converting snapshot to CSV: ${error}`);
+    } else {
+      spinner.succeed(`Snapshot successfully converted to CSV and saved to: ${final_importable_csv_path}`);
+    }
+  });
+};
 
 const verifyChecksum = () => {
   spinner.start(`Verifying checksum... ${last_snapshot_sha}`);
   const exec = require('child_process').exec;
   exec(`shasum ${last_snapshot_destination_path} | awk '{ print $1}'`, (err, out, code) => {
-    if (out.includes(last_snapshot_sha)) {
+    if (out.trim().includes(last_snapshot_sha)) {
       spinner.succeed('Downloaded file verified.');
+      convertSnapshotToCSV();
     } else {
+      console.log("\n", out.trim(), 'vs', last_snapshot_sha.trim(), out.trim().includes(last_snapshot_sha));
       spinner.fail('Downloaded file not verified.  Please verify the checksum of the file manually, and proceed with caution.');
     }
     process.exit();

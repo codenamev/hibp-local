@@ -12,16 +12,16 @@
     "type": "git"
   },
   "scripts": {
-    "download": "node ./download.js",
-    "import": "node ./import.js",
-    "install": ""
+    "download": "node ./download.js"
   },
   "engines": {
     "node": ">= 4"
   },
   "dependencies": {
-    "ora": "^2.0.0",
+    "dotenv": "^5.0.1",
+    "mysql": "^2.15.0",
     "node-fetch": "^2.0.0",
-    "mysql": "^2.15.0"
+    "ora": "^2.0.0",
+    "prompts": "^0.1.4"
   }
 }
