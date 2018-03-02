@@ -30,7 +30,6 @@ const verifyChecksum = () => {
       spinner.succeed('Downloaded file verified.');
       convertSnapshotToCSV();
     } else {
-      console.log("\n", out.trim(), 'vs', last_snapshot_sha.trim(), out.trim().includes(last_snapshot_sha));
       spinner.fail('Downloaded file not verified.  Please verify the checksum of the file manually, and proceed with caution.');
     }
     process.exit();

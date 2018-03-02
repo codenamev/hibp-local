@@ -12,16 +12,22 @@
     "type": "git"
   },
   "scripts": {
-    "download": "node ./download.js"
+    "download": "node ./download.js",
+    "setup": "node ./setup.js",
+    "import": "source .env && docker run -it --link hibp_percona mysql -h hibp_percona -P 3306 -u $MYSQL_USER -p $MYSQL_PASSWORD hibp_local < ./import.sql",
+    "start": "docker-compose up -d",
+    "server": "node ./server"
   },
   "engines": {
     "node": ">= 4"
   },
   "dependencies": {
     "dotenv": "^5.0.1",
+    "express": "^4.16.2",
     "mysql": "^2.15.0",
     "node-fetch": "^2.0.0",
     "ora": "^2.0.0",
-    "prompts": "^0.1.4"
+    "prompts": "^0.1.4",
+    "pug": "^2.0.0-rc.4"
   }
 }
