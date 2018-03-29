@@ -14,9 +14,10 @@
   "scripts": {
     "download": "node ./download.js",
     "setup": "node ./setup.js",
-    "import": "source .env && docker run -it --link hibp_percona mysql -h hibp_percona -P 3306 -u $MYSQL_USER -p $MYSQL_PASSWORD hibp_local < ./import.sql",
-    "start": "docker-compose up -d",
-    "server": "node ./server"
+    "import": "docker exec -u root -i hibp-local /bin/sh -c \"mysql -h localhost -u $MYSQL_USER < /var/lib/mysql-files/import.sql\"",
+    "server": "node ./server",
+    "start": "docker run -d --env-file .env --name hibp-local -v my.cnf:/etc/mysql/conf.d/my.cnf hibp-local/percona",
+    "stop": "docker stop hibp-local"
   },
   "engines": {
     "node": ">= 4"

@@ -2,6 +2,8 @@ const fs = require('fs');
 const prompts = require('prompts');
 const ora = require('ora');
 
+const exec = require('child_process').exec;
+const execSync = require('child_process').execSync;
 const spinner = ora('Setting up environment...');
 
 let questions = [
@@ -33,19 +35,23 @@ prompts(questions).then((response) => {
     env_file_stream.write(`MYSQL_PASSWORD=${response.mysql_password}\n`);
     env_file_stream.end();
   });
+  execSync('source .env');
   spinner.succeed('Environment variables setup.');
 })
   .then(() => {
-    const exec = require('child_process').exec;
-    spinner.start('Building docker containers...');
-    exec(`docker-compose up -d`, (error, stdout, stderr) => {
+    execSync('echo $MYSQL_USER');
+    spinner.start('Building database container...');
+    return exec('docker build -t hibp-local/percona --build-arg MYSQL_USER=$MYSQL_USER --build-arg MYSQL_PASSWORD=$MYSQL_PASSWORD .', (error, stdout, stderr) => {
       if (error) {
         spinner.fail(`Error building docker containers: ${error}`);
         process.exit();
       } else {
         spinner.succeed('Docker containers built.');
+        spinner.start('Starting docker container...');
+        execSync('yarn run start');
+        spinner.succeed('Docker containers built.');
         spinner.start('Copying password data to percona for import...');
-        exec(`docker cp tmp/data/pwned-passwords.txt hibp_percona:/tmp/pwned-passwords.txt`, (err, stdout, stderr) => {
+        exec(`docker cp import.sql tmp/data/pwned-passwords.txt hibp-local:/tmp/`, (err, stdout, stderr) => {
           if (err) {
             spinner.fail(`Error copying password data to hibp_percona container: ${err}`);
           } else {
@@ -55,6 +61,8 @@ prompts(questions).then((response) => {
         });
       }
     });
+  })
+  .then(() => {
   })
   .catch((err) => {
     console.log(err);

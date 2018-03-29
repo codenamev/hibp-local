@@ -1,20 +1,13 @@
-FROM node:8.9.1-alpine
+FROM percona:latest
+ARG MYSQL_DATABASE=hibp_local
+ARG MYSQL_USER=hibp
+ARG MYSQL_PASSWORD=password
 
-RUN apk add --no-cache build-base
-RUN npm install -g yarn
+ENV MYSQL_RANDOM_ROOT_PASSWORD yes
+ENV MYSQL_DATABASE ${MYSQL_DATABASE}
+ENV MYSQL_USER ${MYSQL_USER}
+ENV MYSQL_PASSWORD ${MYSQL_PASSWORD}
 
-# Create app directory
-RUN mkdir /app
-WORKDIR /app
+COPY --chown=mysql:mysql import.sql /var/lib/mysql-files/import.sql
 
-# Install app dependencies
-COPY package.json .env /app/
-
-ENV DOCKER=true
-RUN yarn install -s
-
-# Bundle app source
-COPY . /app
-
-EXPOSE 4000
-CMD yarn run server
+EXPOSE 3306
