@@ -1,0 +1,123 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.012  000.012: --- VIM STARTING ---
+000.217  000.205: Allocated generic buffers
+000.845  000.628: locale set
+000.854  000.009: clipboard setup
+000.867  000.013: window checked
+001.576  000.709: inits 1
+001.580  000.004: parsing arguments
+001.581  000.001: expanding arguments
+007.195  005.614: shell init
+007.611  000.416: Termcap init
+007.632  000.021: inits 2
+008.910  001.278: init highlight
+011.052  000.440  000.440: sourcing /usr/local/share/vim/vim80/syntax/syncolor.vim
+011.248  000.982  000.542: sourcing /usr/local/share/vim/vim80/syntax/synload.vim
+034.749  023.294  023.294: sourcing /usr/local/share/vim/vim80/filetype.vim
+034.800  024.837  000.561: sourcing /usr/local/share/vim/vim80/syntax/syntax.vim
+037.699  002.430  002.430: sourcing /Users/codenamev/.vim/autoload/plug.vim
+044.189  002.181  002.181: sourcing /usr/local/share/vim/vim80/ftoff.vim
+067.150  000.629  000.629: sourcing /Users/codenamev/.vim/bundle/vim-elixir/ftdetect/elixir.vim
+067.966  000.600  000.600: sourcing /Users/codenamev/.vim/bundle/vim-go/ftdetect/gofiletype.vim
+068.878  000.667  000.667: sourcing /Users/codenamev/.vim/bundle/vim-coffee-script/ftdetect/coffee.vim
+069.654  000.557  000.557: sourcing /Users/codenamev/.vim/bundle/vim-javascript/ftdetect/javascript.vim
+070.307  000.389  000.389: sourcing /Users/codenamev/.vim/bundle/vim-slim/ftdetect/slim.vim
+071.869  001.138  001.138: sourcing /Users/codenamev/.vim/bundle/vim-ruby/ftdetect/ruby.vim
+073.238  001.286  001.286: sourcing /Users/codenamev/.vim/bundle/vim-ruby/ftdetect/ruby_extra.vim
+073.932  000.502  000.502: sourcing /Users/codenamev/.vim/bundle/vim-jsx/ftdetect/javascript.vim
+074.387  000.294  000.294: sourcing /Users/codenamev/.vim/bundle/vim-vue/ftdetect/vue.vim
+074.736  028.402  022.340: sourcing /usr/local/share/vim/vim80/filetype.vim
+075.311  000.236  000.236: sourcing /usr/local/share/vim/vim80/ftplugin.vim
+075.900  000.256  000.256: sourcing /usr/local/share/vim/vim80/indent.vim
+076.012  041.061  007.556: sourcing /Users/codenamev/.vimrc.bundles
+079.612  000.992  000.992: sourcing /usr/local/Cellar/vim/8.0.1250/share/vim/vim80/pack/dist/opt/matchit/plugin/matchit.vim
+079.687  002.272  001.280: sourcing /usr/local/share/vim/vim80/macros/matchit.vim
+080.036  000.055  000.055: sourcing /usr/local/share/vim/vim80/filetype.vim
+080.327  000.019  000.019: sourcing /usr/local/share/vim/vim80/ftplugin.vim
+080.668  000.021  000.021: sourcing /usr/local/share/vim/vim80/indent.vim
+081.331  071.933  003.668: sourcing $HOME/.vimrc
+081.339  000.496: sourcing vimrc file(s)
+081.749  000.186  000.186: sourcing /Users/codenamev/.vim/plugin/ctags.vim
+082.063  000.165  000.165: sourcing /Users/codenamev/.vim/bundle/vim-run-interactive/plugin/run-interactive.vim
+083.003  000.447  000.447: sourcing /Users/codenamev/.vim/bundle/ctrlp.vim/autoload/ctrlp/mrufiles.vim
+083.171  000.979  000.532: sourcing /Users/codenamev/.vim/bundle/ctrlp.vim/plugin/ctrlp.vim
+083.778  000.455  000.455: sourcing /Users/codenamev/.vim/bundle/vim-go/plugin/go.vim
+084.755  000.844  000.844: sourcing /Users/codenamev/.vim/bundle/vim-test/plugin/test.vim
+085.124  000.188  000.188: sourcing /Users/codenamev/.vim/bundle/vim-mkdir/plugin/mkdir.vim
+085.927  000.195  000.195: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+086.166  000.183  000.183: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+086.443  000.221  000.221: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+086.692  000.193  000.193: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+086.943  000.196  000.196: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+087.219  000.221  000.221: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+087.465  000.191  000.191: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+087.708  000.187  000.187: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+088.006  000.228  000.228: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+088.256  000.193  000.193: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+089.743  000.821  000.821: sourcing /Users/codenamev/.vim/bundle/syntastic/autoload/syntastic/util.vim
+611.967  000.109  000.109: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/autoloclist.vim
+612.134  000.099  000.099: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/balloons.vim
+612.479  000.294  000.294: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/checker.vim
+612.683  000.149  000.149: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/cursor.vim
+612.859  000.127  000.127: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/highlighting.vim
+613.412  000.503  000.503: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/loclist.vim
+613.636  000.155  000.155: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/modemap.vim
+613.820  000.108  000.108: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/notifiers.vim
+614.334  000.467  000.467: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/registry.vim
+614.669  000.221  000.221: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic/signs.vim
+616.155  527.841  524.788: sourcing /Users/codenamev/.vim/bundle/syntastic/plugin/syntastic.vim
+618.968  002.634  002.634: sourcing /Users/codenamev/.vim/bundle/vim-bundler/plugin/bundler.vim
+619.831  000.685  000.685: sourcing /Users/codenamev/.vim/bundle/vim-endwise/plugin/endwise.vim
+620.797  000.789  000.789: sourcing /Users/codenamev/.vim/bundle/vim-eunuch/plugin/eunuch.vim
+626.593  005.607  005.607: sourcing /Users/codenamev/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+627.321  000.544  000.544: sourcing /Users/codenamev/.vim/bundle/vim-projectionist/plugin/projectionist.vim
+628.333  000.825  000.825: sourcing /Users/codenamev/.vim/bundle/vim-rails/plugin/rails.vim
+629.771  001.259  001.259: sourcing /Users/codenamev/.vim/bundle/vim-rake/plugin/rake.vim
+630.322  000.377  000.377: sourcing /Users/codenamev/.vim/bundle/vim-rhubarb/plugin/rhubarb.vim
+631.482  000.990  000.990: sourcing /Users/codenamev/.vim/bundle/vim-surround/plugin/surround.vim
+635.272  003.583  003.583: sourcing /Users/codenamev/.vim/bundle/tComment/plugin/tcomment.vim
+636.001  000.546  000.546: sourcing /Users/codenamev/.vim/bundle/tabular/plugin/Tabular.vim
+636.595  000.392  000.392: sourcing /Users/codenamev/.vim/bundle/patchreview-vim/plugin/patchreview.vim
+637.076  000.319  000.319: sourcing /Users/codenamev/.vim/bundle/vim-codereview/plugin/codereview.vim
+637.695  000.480  000.480: sourcing /Users/codenamev/.vim/bundle/vimux/plugin/vimux.vim
+638.693  000.269  000.269: sourcing /usr/local/share/vim/vim80/plugin/getscriptPlugin.vim
+639.472  000.717  000.717: sourcing /usr/local/share/vim/vim80/plugin/gzip.vim
+640.113  000.560  000.560: sourcing /usr/local/share/vim/vim80/plugin/logiPat.vim
+640.429  000.245  000.245: sourcing /usr/local/share/vim/vim80/plugin/manpager.vim
+640.984  000.485  000.485: sourcing /usr/local/share/vim/vim80/plugin/matchparen.vim
+641.932  000.894  000.894: sourcing /usr/local/share/vim/vim80/plugin/netrwPlugin.vim
+642.176  000.173  000.173: sourcing /usr/local/share/vim/vim80/plugin/rrhelper.vim
+642.461  000.211  000.211: sourcing /usr/local/share/vim/vim80/plugin/spellfile.vim
+642.906  000.382  000.382: sourcing /usr/local/share/vim/vim80/plugin/tarPlugin.vim
+643.254  000.243  000.243: sourcing /usr/local/share/vim/vim80/plugin/tohtml.vim
+643.649  000.334  000.334: sourcing /usr/local/share/vim/vim80/plugin/vimballPlugin.vim
+644.070  000.348  000.348: sourcing /usr/local/share/vim/vim80/plugin/zipPlugin.vim
+644.290  000.052  000.052: sourcing /usr/local/Cellar/vim/8.0.1250/share/vim/vim80/pack/dist/opt/matchit/plugin/matchit.vim
+644.300  006.352: loading plugins
+644.382  000.082: loading packages
+645.841  000.729  000.729: sourcing /Users/codenamev/.vim/bundle/tabular/autoload/tabular.vim
+647.817  003.244  002.515: sourcing /Users/codenamev/.vim/bundle/tabular/after/plugin/TabularMaps.vim
+647.862  000.236: loading after plugins
+647.875  000.013: inits 3
+649.417  001.542: reading viminfo
+649.494  000.077: setting raw mode
+649.501  000.007: start termcap
+649.559  000.058: clearing screen
+651.202  000.843  000.843: sourcing /Users/codenamev/.vim/bundle/syntastic/autoload/syntastic/log.vim
+651.294  000.892: opening buffers
+651.837  000.543: BufEnter autocommands
+651.841  000.004: editing files in windows
+656.012  001.595  001.595: sourcing /Users/codenamev/.vim/bundle/vim-projectionist/autoload/projectionist.vim
+37747.657  013.247  013.247: sourcing /Users/codenamev/.vim/bundle/vim-rails/autoload/rails.vim
+37815.494  000.275  000.275: sourcing /Users/codenamev/.vim/bundle/vim-ruby/compiler/rake.vim
+37815.852  000.193  000.193: sourcing /usr/local/share/vim/vim80/compiler/rake.vim
+37815.973  001.548  001.080: sourcing /Users/codenamev/.vim/bundle/vim-rails/compiler/rails.vim
+37826.051  37157.820: VimEnter autocommands
+37826.058  000.007: before starting main loop
+37827.055  000.997: first screen update
+37827.057  000.002: --- VIM STARTED ---

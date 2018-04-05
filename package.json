@@ -1,34 +1,5 @@
 {
   "name": "hibp-local",
-  "version": "0.1.0",
-  "description": "Locally search the Have I Been Pwned database for compromised passwords",
-  "homepage": "https://github.com/codenamev/hibp-local",
-  "bugs": "https://github.com/codenamev/hibp-local/issues",
-  "main": "index.js",
-  "author": "Valentino Stoll <v@codenamev.com>",
-  "license": "MIT",
-  "repository": {
-    "url": "https://github.com/codenamev/hibp-local.git",
-    "type": "git"
-  },
-  "scripts": {
-    "download": "node ./download.js",
-    "setup": "node ./setup.js",
-    "import": "docker exec -u root -i hibp-local /bin/sh -c \"mysql -h localhost -u $MYSQL_USER < /var/lib/mysql-files/import.sql\"",
-    "server": "node ./server",
-    "start": "docker run -d --env-file .env --name hibp-local -v my.cnf:/etc/mysql/conf.d/my.cnf hibp-local/percona",
-    "stop": "docker stop hibp-local"
-  },
-  "engines": {
-    "node": ">= 4"
-  },
-  "dependencies": {
-    "dotenv": "^5.0.1",
-    "express": "^4.16.2",
-    "mysql": "^2.15.0",
-    "node-fetch": "^2.0.0",
-    "ora": "^2.0.0",
-    "prompts": "^0.1.4",
-    "pug": "^2.0.0-rc.4"
-  }
+  "private": true,
+  "dependencies": {}
 }
